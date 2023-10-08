@@ -1,70 +1,95 @@
-/*
-in java bc my head sees it clearer in java
-public void Buttonpressed(){
-    if(buttonpressed=penny){
-        penny++;
-        pennyval+=.01;
-        totalval+=.01;
-    }
-    if(buttonpressed=nickel){
-        nickel++;
-        nickelval+=.05;
-        totalval+=.05;
-    }
-    if(buttonpressed=dime){
-        dime++;
-        dimeval+=.1;
-        totalval+=.1;
-    }
-    if(buttonpressed=quarter){
-        quarter++;
-        quarterval+=.25;
-        totalval+=.25;
-    }
+//Pennies
+const pb = document.getElementById("pb");
+const pb2 = document.getElementById("pb2");
+pb.addEventListener("click", pennyAdd);
+pb2.addEventListener("click",pennySubtract)
+var pa = 0;
+var pw = 0;
 
-
-
-    another idea:
-
-    pb.onClick runs a function that calls addition(.01)
-
-}*/
-
-//declare variables
-
-const pb = document.getElementByClass("add");
-const nb = document.getElementById("nb");
-const db = document.getElementById("db");
-const qb = document.getElementById("qb");
-const pa = 0;
-const na = 0;
-const da = 0;
-const qa = 0;
-pb.addEventListener("click", test());
-nb.addEventListener("click", addition(.05));
-db.addEventListener("click", addition(.1));
-qb.addEventListener("click", addition(.25));
-
-
-function test(){
-    console.log("a");
+function pennyAdd(){
+    pa++;
+    pw+=.01;
+    p.innerText = "Pennies: " + pa;
+    pval.innerText = "Pennies Total Value: " + pw.toFixed(2);
 }
-function addition(num){
-    if(num=.01){
-        pa++;
+function pennySubtract(){
+    if(pa!=0){
+        pa--;
+        pw-=.01;
         p.innerText = "Pennies: " + pa;
+        pval.innerText = "Pennies Total Value: " + pw.toFixed(2);
     }
-    if(num=.05){
 
-    }
-    if(num=.1){
-
-    }
-    if(num=.25){
-
-    }
 }
 
+//Nickels
+const nb = document.getElementById("nb");
+const nb2 = document.getElementById("nb2");
+nb.addEventListener("click", nickelAdd);
+nb2.addEventListener("click", nickelSubtract);
+var na = 0;
+var nw = 0;
 
+function nickelAdd(){
+    na++;
+    nw+=.05;
+    n.innerText = "Nickels: " + na;
+    nval.innerText = "Nickels Total Value: " + nw.toFixed(2);
+}
+function nickelSubtract(){
+    if(na!=0){
+        na--;
+        nw-=.05;
+        n.innerText = "Nickels: " + na;
+        nval.innerText = "Nickels Total Value: " + nw.toFixed(2);
+        }
 
+}
 
+//Dimes
+const db = document.getElementById("db");
+const db2 = document.getElementById("db2");
+db.addEventListener("click", dimeAdd);
+db2.addEventListener("click",dimeSubtract)
+var da = 0;
+var dw = 0;
+
+function dimeAdd(){
+    da++;
+    dw+=.1;
+    d.innerText = "Dimes: " + da;
+    dval.innerText = "Dimes Total Value: " + dw.toFixed(2);
+}
+function dimeSubtract(){
+    if(da!=0){
+        da--;
+        dw-=.1;
+        d.innerText = "Dimes: " + da;
+        dval.innerText = "Dimes Total Value: " + dw.toFixed(2);
+    }
+
+}
+
+//Quarters
+const qb = document.getElementById("qb");
+const qb2 = document.getElementById("qb2");
+qb.addEventListener("click", quarterAdd);
+qb2.addEventListener("click",quarterSubtract)
+var qa = 0;
+var qw = 0;
+
+function quarterAdd(){
+    qa++;
+    qw+=.25;
+    q.innerText = "Quarters: " + qa;
+    qval.innerText = "Quarters Total Value: " + qw.toFixed(2);
+}
+function quarterSubtract(){
+    if(qa!=0){
+        qa--;
+        qw-=.25;
+        q.innerText = "Quarters: " + qa;
+        qval.innerText = "Quarters Total Value: " + qw.toFixed(2);
+    }
+
+}
