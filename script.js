@@ -11,6 +11,7 @@ function pennyAdd() {
   pw += 0.01;
   p.innerText = "Pennies: " + pa;
   pval.innerText = "Pennies Total Value: " + pw.toFixed(2);
+  tt();
 }
 function pennySubtract() {
   if (pa != 0) {
@@ -18,6 +19,7 @@ function pennySubtract() {
     pw -= 0.01;
     p.innerText = "Pennies: " + pa;
     pval.innerText = "Pennies Total Value: " + pw.toFixed(2);
+    tt();
   }
 }
 
@@ -34,6 +36,7 @@ function nickelAdd() {
   nw += 0.05;
   n.innerText = "Nickels: " + na;
   nval.innerText = "Nickels Total Value: " + nw.toFixed(2);
+  tt();
 }
 function nickelSubtract() {
   if (na != 0) {
@@ -41,6 +44,7 @@ function nickelSubtract() {
     nw -= 0.05;
     n.innerText = "Nickels: " + na;
     nval.innerText = "Nickels Total Value: " + nw.toFixed(2);
+    tt();
   }
 }
 
@@ -57,6 +61,7 @@ function dimeAdd() {
   dw += 0.1;
   d.innerText = "Dimes: " + da;
   dval.innerText = "Dimes Total Value: " + dw.toFixed(2);
+  tt();
 }
 function dimeSubtract() {
   if (da != 0) {
@@ -64,6 +69,7 @@ function dimeSubtract() {
     dw -= 0.1;
     d.innerText = "Dimes: " + da;
     dval.innerText = "Dimes Total Value: " + dw.toFixed(2);
+    tt();
   }
 }
 
@@ -80,6 +86,7 @@ function quarterAdd() {
   qw += 0.25;
   q.innerText = "Quarters: " + qa;
   qval.innerText = "Quarters Total Value: " + qw.toFixed(2);
+  tt();
 }
 function quarterSubtract() {
   if (qa != 0) {
@@ -87,5 +94,12 @@ function quarterSubtract() {
     qw -= 0.25;
     q.innerText = "Quarters: " + qa;
     qval.innerText = "Quarters Total Value: " + qw.toFixed(2);
+    tt();
   }
+}
+
+
+function tt(){
+  var totalValue = qw+dw+nw+pw;
+  tval.innerText = "Total Value of All Coins: " + totalValue.toFixed(2);
 }
