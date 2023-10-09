@@ -1,0 +1,25 @@
+body{
+    background-color:rgb(7, 44, 35);
+    background-image:url(coins.png);
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+span{
+    justify-content: center;
+    color:white;
+}
+button{
+    color:white;
+    border:none;
+    border-radius: 10px;
+    background-color: darkolivegreen;
+    font-size:16px;
+}
+p{  
+    font-size:20px;
+    margin:15px;
+}
+img{
+    width:22%;
+}
